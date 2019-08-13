@@ -16,3 +16,8 @@ My repository consists of 5 files:
 Tjaž Eržen
 - LinkedIn: https://www.linkedin.com/in/tjaz-erzen-688aa1190/
 - Github: https://github.com/tjazerzen
+
+# Further research
+Here's a few resources to get deeper understanding of this algorithm:
+- Youtube theoretical explanation: https://www.youtube.com/watch?v=HNdOFYCtfu4
+- Theoretical explanation on the Stanford blog: http://theory.stanford.edu/~amitp/GameProgramming/AStarComparison.html
