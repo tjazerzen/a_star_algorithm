@@ -1,5 +1,6 @@
 from a_star_algorithm import shortest_path
 
+# Getting the coordinates of each point from intersections.txt and then creating a dictionary with them
 coordinates_file = open("intersections.txt", "r")
 coordinates = dict()
 coordinates_lines = coordinates_file.readlines()
@@ -12,6 +13,8 @@ for index, line in enumerate(coordinates_lines):
 coordinates_file.close()
 
 
+# Getting the adjacency list of each node from adjacency_list.txt
+# Creating 2D list out of adjacency list of lenght 40, which is the number of nodes in the the graph
 adjacency_file = open("adjacency_list.txt", "r")
 adjacency_list = list()
 adjacency_lines = adjacency_file.readlines()
@@ -24,6 +27,7 @@ for line in adjacency_lines:
 adjacency_file.close()
 
 
+# Pre-made answers for your testing purposes
 map_answers = [
     (5, 34, [5, 16, 37, 12, 34]),
     (5, 5,  [5]),
@@ -34,8 +38,8 @@ map_answers = [
 ]
 
 
+# Test function for your test purposes
 def test(shortest_path_function):
-    # map_40 = load_map('map-40.pickle')
     correct = 0
     for start, goal, answer_path in map_answers:
         path = shortest_path_function(coordinates, adjacency_list, start, goal)
@@ -47,9 +51,9 @@ def test(shortest_path_function):
                   "Your path:", path,
                   "Correct:  ", answer_path)
     if correct == len(map_answers):
-        print("All tests pass! Congratulations!")
+        print("You passed all tests!!")
     else:
-        print("You passed", correct, "/", len(map_answers), "test cases")
+        print("You didn't pass all the tests :/")
 
 
 test(shortest_path)
