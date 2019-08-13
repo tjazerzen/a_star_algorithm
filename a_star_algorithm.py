@@ -1,10 +1,12 @@
 from helper_functions import calculate_distance, heuristic_value, calculate_connections
 import heapq
 from copy import deepcopy
+
+
 # Note: if it isn't possible to get from one point to another, -1 is returned
-
+# As told in readme, the map is split into 3 areas - explored, unexplored and frontier
+# The node with the smallest a_star_value is always chosen
 def shortest_path(coordinates, connection_list, start_point, end_point):
-
     list_for_calculations = deepcopy(connection_list)
     heuristic_values = heuristic_value(start_point, coordinates)
     connection_distances = calculate_connections(coordinates, list_for_calculations)
